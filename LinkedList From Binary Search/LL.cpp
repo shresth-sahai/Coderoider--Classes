@@ -50,3 +50,23 @@ int solve(LLNode* node) {
     }
     return n;
 }
+
+Linked List to Integer
+Easy
+
+Given a single linked list node, representing a binary number with most significant digits first, return it as an integer.
+
+Constraints
+
+n ≤ 30 where n the number of nodes in node
+
+
+
+int solve(LLNode* node) {
+    int n = 0;
+    while (node) {
+        n++;
+        node = node->next;
+    }
+    return n;
+}a
