@@ -14,3 +14,27 @@ bool solve(LLNode* head) {
     return true;
 }
 
+LinkedList Jumps
+
+
+import java.util.*;
+
+/**
+ * class LLNode {
+ *   int val;
+ *   LLNode next;
+ * }
+ */
+class Solution {
+    public LLNode solve(LLNode head) {
+        LLNode curr = head, prev = head;
+        while (curr != null) {
+            int n = curr.val;
+            for (int i = 0; curr != null && i < n; i++) curr = curr.next;
+
+            prev.next = curr;
+            prev = prev.next;
+        }
+        return head;
+    }
+}
