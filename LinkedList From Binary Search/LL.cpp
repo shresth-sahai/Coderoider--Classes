@@ -63,10 +63,11 @@ n ≤ 30 where n the number of nodes in node
 
 
 int solve(LLNode* node) {
-    int n = 0;
-    while (node) {
-        n++;
+    int num = 0;
+
+    while (node != NULL) {
+        num = num * 2 + node->val;
         node = node->next;
     }
-    return n;
-}a
+    return num;
+}
